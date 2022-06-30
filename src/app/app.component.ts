@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   userList: Observable<{ userList: string[]; }>;
   //userList: Observable<string[]>;
 
-  constructor(private store: Store<{usersR: { userList: string[] }}>) {
+  constructor(private store: Store<{ usersR: { userList: string[] } }>) {
     //this.userList = this.store.select('usersR');
   }
 
@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
   addNewUser(newusername: string) {
     //this.userList.push(newusername);
     this.store.dispatch(new UserListAction(newusername))
-
+    //this.userList.push(newusername);
   }
 
 }
