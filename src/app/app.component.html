@@ -1,0 +1,16 @@
+<div>
+    Enter Username: <input type="text" #username>
+    &nbsp;<button (click)="addNewUser(username.value)">Add User</button>
+</div>
+<br>
+<div>
+    <h4>Username Lists</h4>
+     {{ userList  }} 
+
+    <!-- <ul *ngIf="userList">
+        <li *ngFor='let name of userList'>
+            {{name}}
+        </li>
+    </ul> -->
+
+</div>
